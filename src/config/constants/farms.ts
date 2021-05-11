@@ -6,7 +6,7 @@ const farms: FarmConfig[] = [
    * These 3 farms (PID 0, 251, 252) should always be at the top of the file.
    */
     {
-      pid: 1,
+      pid: 3,
       lpSymbol: 'LP1',
       lpAddresses: {
         250: '',
@@ -15,16 +15,16 @@ const farms: FarmConfig[] = [
       token: tokens.token1,
       quoteToken: tokens.token2,
     },
-    {
-      pid: 2,
-      lpSymbol: 'LP3',
-      lpAddresses: {
-        250: '',
-        4002: '0x5Ce54f2Df948C3dF5ecB61f496538B0332F039B8',
-      },
-      token: tokens.token1,
-      quoteToken: tokens.token2,
-    },
+    // {
+    //   pid: 2,
+    //   lpSymbol: 'LP3',
+    //   lpAddresses: {
+    //     250: '',
+    //     4002: '0x5Ce54f2Df948C3dF5ecB61f496538B0332F039B8',
+    //   },
+    //   token: tokens.token1,
+    //   quoteToken: tokens.token2,
+    // },
   // {
   //   pid: 0,
   //   lpSymbol: 'CAKE',

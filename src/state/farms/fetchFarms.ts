@@ -8,9 +8,12 @@ import { FarmConfig } from 'config/constants/types'
 import { DEFAULT_TOKEN_DECIMAL } from 'config'
 
 const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
+
   const data = await Promise.all(
+
     farmsToFetch.map(async (farmConfig) => {
       const lpAddress = getAddress(farmConfig.lpAddresses)
+      console.log(lpAddress)
       const calls = [
         // Balance of token in the LP contract
         {
@@ -98,6 +101,8 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
       }
     }),
   )
+
+  console.log(data)
   return data
 }
 

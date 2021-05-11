@@ -143,11 +143,12 @@ const Staked: React.FunctionComponent<StackedActionProps> = ({
     )
   }
 
+  console.log(userDataReady)
   if (!userDataReady) {
     return (
       <ActionContainer>
         <ActionTitles>
-          <Subtle>{t('START FARMING')}</Subtle>
+          <Subtle>{t('START FARMING12')}</Subtle>
         </ActionTitles>
         <ActionContent>
           <Skeleton width={180} marginBottom={28} marginTop={14} />

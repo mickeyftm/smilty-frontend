@@ -336,6 +336,7 @@ const Farms: React.FC = () => {
         sortable: column.sortable,
       }))
 
+      console.log(rowData)
       return <Table data={rowData} columns={columns} userDataReady={userDataReady} />
     }
 
