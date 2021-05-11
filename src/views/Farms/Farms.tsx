@@ -205,9 +205,10 @@ const Farms: React.FC = () => {
     let farmsStaked = []
 
     const sortFarms = (farms: FarmWithStakedValue[]): FarmWithStakedValue[] => {
+      console.log(farms)
       switch (sortOption) {
         case 'apr':
-          return orderBy(farms, (farm: FarmWithStakedValue) => farm.apr, 'desc')
+          return orderBy(farms, (farm: FarmWithStakedValue) => farm.apr , 'desc')
         case 'multiplier':
           return orderBy(
             farms,
@@ -280,7 +281,7 @@ const Farms: React.FC = () => {
 
     const row: RowProps = {
       apr: {
-        value: farm.apr && farm.apr.toLocaleString('en-US', { maximumFractionDigits: 2 }),
+        value: farm.apr && farm.apr.toLocaleString('en-US', { maximumFractionDigits: 2 }) ,
         multiplier: farm.multiplier,
         lpLabel,
         tokenAddress,

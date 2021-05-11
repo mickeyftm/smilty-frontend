@@ -17,7 +17,7 @@ export default {
   },
   multiCall: {
     250: '0x1ee38d535d541c55c9dae27b12edf090c608e6fb',
-    4002: '0x67ADCB4dF3931b0C5Da724058ADC2174a9844412',
+    4002: '0x6d2c2c918d43465fca5FCd66CBC8cD317477A760',
   },
   pancakeProfile: {
     250: '0xDf4dBf6536201370F95e06A0F8a7a70fE40E388a',

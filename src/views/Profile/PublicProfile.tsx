@@ -112,7 +112,7 @@ const PublicProfile = () => {
                   <Icon ml="4px" onClick={toggleUsernameVisibility} cursor="pointer" />
                 </Flex>
                 <Flex alignItems="center">
-                  <AddressLink href={`https://bscscan.com/address/${account}`} color="text" external>
+                  <AddressLink href={`https://explorer.testnet.fantom.network/address/${account}`} color="text" external>
                     {account}
                     <OpenNewIcon ml="4px" />
                   </AddressLink>
