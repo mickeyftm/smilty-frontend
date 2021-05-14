@@ -51,7 +51,7 @@ const PoolTabButtons = ({ stakedOnly, setStakedOnly, hasStakeInFinishedPools }) 
           <Text ml="8px">{t('Staked only')}</Text>
         </Flex>
       </Flex>
-      <Flex ml="24px" alignItems="center" justifyContent="flex-end">
+      {/* <Flex ml="24px" alignItems="center" justifyContent="flex-end">
         <StyledLink external href="https://docs.pancakeswap.finance/syrup-pools/syrup-pool">
           <Button px={['14px', null, null, null, '20px']} variant="subtle">
             <ButtonText color="backgroundAlt" bold fontSize="16px">
@@ -60,7 +60,7 @@ const PoolTabButtons = ({ stakedOnly, setStakedOnly, hasStakeInFinishedPools }) 
             <HelpIcon color="backgroundAlt" ml={[null, null, null, 0, '6px']} />
           </Button>
         </StyledLink>
-      </Flex>
+      </Flex> */}
     </Flex>
   )
 }

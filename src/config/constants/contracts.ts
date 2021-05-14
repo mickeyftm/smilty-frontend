@@ -4,8 +4,8 @@ export default {
     4002: '0xE8026Cec62a5481372F2D41E7F194152654BaF89',
   },
   sousChef: {
-    250: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
-    4002: '0x6ab8463a4185b80905e05a9ff80a2d6b714b9e95',
+    250: '',
+    4002: '0xC869C5feB420b740977842D25310162B12A83EDa',
   },
   lottery: {
     250: '0x99c2EcD51d52c036B00130d882Bc65f20Fdecf9f',

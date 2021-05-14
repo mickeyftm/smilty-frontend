@@ -3,12 +3,12 @@ import { PoolConfig, PoolCategory } from './types'
 
 const pools: PoolConfig[] = [
   {
-    sousId: 3,
-    stakingToken: tokens.token1,
-    earningToken: tokens.token2,
+    sousId: 0,
+    stakingToken: tokens.token,
+    earningToken: tokens.token,
     contractAddress: {
       250: '',
-      4002: '0x62D443F351A7ae457937F1Eb9c636AF2018BdEA9',
+      4002: '0xE8026Cec62a5481372F2D41E7F194152654BaF89',
     },
     poolCategory: PoolCategory.CORE,
     harvest: true,

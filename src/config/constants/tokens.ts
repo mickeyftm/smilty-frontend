@@ -1,4 +1,13 @@
 const tokens = {
+  token: {
+    symbol: 'TOKEN',
+    address: {
+      250: '',
+      4002: '0x4E77c69B0C4964829405144087c5eCf70d643deA',
+    },
+    decimals: 18,
+    projectLink: 'https://smileyswap.finance/',
+  },
   token1: {
     symbol: 'TOKEN1',
     address: {
@@ -6,7 +15,7 @@ const tokens = {
       4002: '0x2F104cb88aF971A3a2896cA51d3948748d4fF93A',
     },
     decimals: 18,
-    projectLink: 'https://pancakeswap.finance/',
+    projectLink: 'https://smileyswap.finance/',
   },
   token2: {
     symbol: 'TOKEN2',
@@ -15,7 +24,7 @@ const tokens = {
       4002: '0x1dfd1E98d6f6606c28D630EFf8E4Ad9b130089f8',
     },
     decimals: 18,
-    projectLink: 'https://pancakeswap.finance/',
+    projectLink: 'https://smileyswap.finance/',
   },
   // bnb: {
   //   symbol: 'BNB',
