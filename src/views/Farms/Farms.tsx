@@ -176,8 +176,11 @@ const Farms: React.FC = () => {
 
         const quoteTokenPriceUsd = prices[getAddress(farm.quoteToken.address).toLowerCase()]
         const totalLiquidity = new BigNumber(farm.lpTotalInQuoteToken).times(quoteTokenPriceUsd)
+        console.log(farm.poolWeight)
+        console.log(cakePrice)
+       
         const apr = isActive ? getFarmApr(farm.poolWeight, cakePrice, totalLiquidity) : 0
-
+        console.log(apr)
         return { ...farm, apr, liquidity: totalLiquidity }
       })
 
@@ -205,7 +208,6 @@ const Farms: React.FC = () => {
     let farmsStaked = []
 
     const sortFarms = (farms: FarmWithStakedValue[]): FarmWithStakedValue[] => {
-      console.log(farms)
       switch (sortOption) {
         case 'apr':
           return orderBy(farms, (farm: FarmWithStakedValue) => farm.apr , 'desc')
@@ -230,6 +232,7 @@ const Farms: React.FC = () => {
 
     if (isActive) {
       farmsStaked = stakedOnly ? farmsList(stakedOnlyFarms) : farmsList(activeFarms)
+      console.log(isActive)
     }
     if (isInactive) {
       farmsStaked = stakedOnly ? farmsList(stakedInactiveFarms) : farmsList(inactiveFarms)
@@ -337,7 +340,6 @@ const Farms: React.FC = () => {
         sortable: column.sortable,
       }))
 
-      console.log(rowData)
       return <Table data={rowData} columns={columns} userDataReady={userDataReady} />
     }
 

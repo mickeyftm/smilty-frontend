@@ -61,13 +61,14 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
 
       // Ratio in % a LP tokens that are in staking, vs the total number in circulation
       const lpTokenRatio = new BigNumber(lpTokenBalanceMC).div(new BigNumber(lpTotalSupply))
-
+   
       // Total value in staking in quote token value
       const lpTotalInQuoteToken = new BigNumber(quoteTokenBalanceLP)
         .div(DEFAULT_TOKEN_DECIMAL)
         .times(new BigNumber(2))
         .times(lpTokenRatio)
-
+        console.log(lpTotalInQuoteToken.toString())
+        console.log(lpTotalInQuoteToken.toJSON())
       // Amount of token in the LP that are considered staking (i.e amount of token * lp ratio)
       const tokenAmount = new BigNumber(tokenBalanceLP).div(BIG_TEN.pow(tokenDecimals)).times(lpTokenRatio)
       const quoteTokenAmount = new BigNumber(quoteTokenBalanceLP)

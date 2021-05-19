@@ -1,27 +1,63 @@
 const tokens = {
-  token: {
-    symbol: 'TOKEN',
+  wftm: {
+    symbol: 'WFTM',
     address: {
       250: '',
-      4002: '0x4E77c69B0C4964829405144087c5eCf70d643deA',
+      4002: '0x643d5eA9D482cFA5b56CBA63Af064569a1698a92',
+    },
+    decimals: 18,
+    projectLink: '',
+  },
+  syrup: {
+    symbol: 'SYRUP',
+    address: {
+      250: '',
+      4002: '0x620919534FB137AAC425206b1Caa39618afA373e',
+    },
+    decimals: 18,
+    projectLink: '',
+  },
+  dai: {
+    symbol: 'DAI',
+    address: {
+      250: '',
+      4002: '0x3a714C664D79227f70Bb696Baa5B56EB4DF8C7A7',
     },
     decimals: 18,
     projectLink: 'https://smileyswap.finance/',
   },
-  token1: {
-    symbol: 'TOKEN1',
+  usdc: {
+    symbol: 'USDC',
     address: {
       250: '',
-      4002: '0x2F104cb88aF971A3a2896cA51d3948748d4fF93A',
+      4002: '0x17D321515D0D91Ca7eA4DD37e62C9707d23Bbc66',
     },
     decimals: 18,
     projectLink: 'https://smileyswap.finance/',
   },
-  token2: {
-    symbol: 'TOKEN2',
+  usdt: {
+    symbol: 'USDT',
     address: {
       250: '',
-      4002: '0x1dfd1E98d6f6606c28D630EFf8E4Ad9b130089f8',
+      4002: '0x3F50080A84DfDE885Ca3348d9180D91A402EbB88',
+    },
+    decimals: 18,
+    projectLink: 'https://smileyswap.finance/',
+  },
+  uni: {
+    symbol: 'UNI',
+    address: {
+      250: '',
+      4002: '0x7cdfb60FD99F018F3E7008717ac914E06f332c1f',
+    },
+    decimals: 18,
+    projectLink: 'https://smileyswap.finance/',
+  },
+  busd: {
+    symbol: 'BUSD',
+    address: {
+      250: '',
+      4002: '0x3eB3F51081206AD9d1ffA6571dd8770d83d79B6f',
     },
     decimals: 18,
     projectLink: 'https://smileyswap.finance/',
@@ -596,15 +632,6 @@ const tokens = {
   //   },
   //   decimals: 18,
   //   projectLink: 'https://compound.finance/',
-  // },
-  // syrup: {
-  //   symbol: 'SYRUP',
-  //   address: {
-  //     56: '0x009cF7bC57584b7998236eff51b98A168DceA9B0',
-  //     97: '0xfE1e507CeB712BDe086f3579d2c03248b2dB77f9',
-  //   },
-  //   decimals: 18,
-  //   projectLink: 'https://pancakeswap.finance/',
   // },
   // bifi: {
   //   symbol: 'BIFI',

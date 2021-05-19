@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Heading, Text, BaseLayout } from '@pancakeswap/uikit'
 import { useTranslation } from 'contexts/Localization'
+
 import Page from 'components/layout/Page'
 import FarmStakingCard from 'views/Home/components/FarmStakingCard'
 import LotteryCard from 'views/Home/components/LotteryCard'
@@ -80,7 +81,7 @@ const Home: React.FC = () => {
         <Heading as="h1" size="xl" mb="24px" color="secondary">
           {t('SmileySwap')}
         </Heading>
-        <Text>{t('The #1 AMM and yield farm on Binance Smart Chain.')}</Text>
+        {/* <Text>{t('The #1 AMM and yield farm on Binance Smart Chain.')}</Text> */}
       </Hero>
       <div>
         <Cards>

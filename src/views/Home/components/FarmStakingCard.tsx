@@ -56,7 +56,7 @@ const FarmedStakingCard = () => {
         <Heading size="xl" mb="24px">
           {t('Farms & Staking')}
         </Heading>
-        <CardImage src="/images/cake.svg" alt="cake logo" width={64} height={64} />
+        <CardImage src="/images/smiley.svg" alt="sms logo" width={64} height={64} />
         <Block>
           <Label>{t('SMS to Harvest')}:</Label>
           <CakeHarvestBalance />

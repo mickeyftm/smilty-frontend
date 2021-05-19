@@ -148,7 +148,7 @@ const ActionPanel: React.FunctionComponent<ActionPanelProps> = ({
   })
   const lpAddress = farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]
   const bsc = `https://explorer.testnet.fantom.network/address/${lpAddress}`
-  const info = `https://pancakeswap.info/pair/${lpAddress}`
+  const info = `https://explorer.testnet.fantom.network/address/${lpAddress}`
 
   return (
     <Container expanded={expanded}>

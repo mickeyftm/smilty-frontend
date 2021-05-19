@@ -113,27 +113,19 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Contact',
-        href: 'https://docs.pancakeswap.finance/contact-us',
-      },
-      {
-        label: 'Voting',
-        href: 'https://voting.pancakeswap.finance',
+        href: '1',
       },
       {
         label: 'Github',
-        href: 'https://github.com/pancakeswap',
+        href: 'https://github.com/smileyswap',
       },
       {
         label: 'Docs',
-        href: 'https://docs.pancakeswap.finance',
+        href: '2',
       },
       {
         label: 'Blog',
-        href: 'https://pancakeswap.medium.com',
-      },
-      {
-        label: 'Merch',
-        href: 'https://pancakeswap.creator-spring.com/',
+        href: '3',
       },
     ],
   },

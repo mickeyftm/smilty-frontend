@@ -1,11 +1,11 @@
 export default {
   masterChef: {
     250: '',
-    4002: '0xE8026Cec62a5481372F2D41E7F194152654BaF89',
+    4002: '0x134c778B9a3b0fa6E117718a7779DAf8D05661bC',
   },
   sousChef: {
     250: '',
-    4002: '0xC869C5feB420b740977842D25310162B12A83EDa',
+    4002: '0xd574fBdfD93B1CFC0b6b7fa9C3116E592489Ed0e',
   },
   lottery: {
     250: '0x99c2EcD51d52c036B00130d882Bc65f20Fdecf9f',
@@ -17,7 +17,7 @@ export default {
   },
   multiCall: {
     250: '0x1ee38d535d541c55c9dae27b12edf090c608e6fb',
-    4002: '0x6d2c2c918d43465fca5FCd66CBC8cD317477A760',
+    4002: '0xDC94a41E4EeCe895ce1cC9B326A39a211CAe815B',
   },
   pancakeProfile: {
     250: '0xDf4dBf6536201370F95e06A0F8a7a70fE40E388a',

@@ -5,15 +5,35 @@ const farms: FarmConfig[] = [
   /**
    * These 3 farms (PID 0, 251, 252) should always be at the top of the file.
    */
+    // {
+    //   pid: 0,
+    //   lpSymbol: 'LP0',
+    //   lpAddresses: {
+    //     250: '',
+    //     4002: '0xe536dD58f1C221395b7C6ecD6643398e7aaD64E1',
+    //   },
+    //   token: tokens.syrup,
+    //   quoteToken: tokens.wftm,
+    // },
     {
-      pid: 3,
-      lpSymbol: 'LP1',
+      pid: 1,
+      lpSymbol: 'DAI-USDT LP',
       lpAddresses: {
         250: '',
-        4002: '0x62D443F351A7ae457937F1Eb9c636AF2018BdEA9',
+        4002: '0x1fD803aF0401bc5BC2279243c72F6E712e5A73Ba',
       },
-      token: tokens.token1,
-      quoteToken: tokens.token2,
+      token: tokens.dai,
+      quoteToken: tokens.usdt,
+    },
+    {
+      pid: 4,
+      lpSymbol: 'BUSD-USDT LP',
+      lpAddresses: {
+        250: '',
+        4002: '0x8dDf72bA97DE0FfFa019f24132452244DC3f2A2B',
+      },
+      token: tokens.busd,
+      quoteToken: tokens.usdt,
     },
     // {
     //   pid: 2,
