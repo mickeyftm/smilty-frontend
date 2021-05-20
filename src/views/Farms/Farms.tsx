@@ -155,6 +155,7 @@ const Farms: React.FC = () => {
   const inactiveFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.multiplier === '0X' && !isArchivedPid(farm.pid))
   const archivedFarms = farmsLP.filter((farm) => isArchivedPid(farm.pid))
 
+
   const stakedOnlyFarms = activeFarms.filter(
     (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
   )
@@ -176,11 +177,9 @@ const Farms: React.FC = () => {
 
         const quoteTokenPriceUsd = prices[getAddress(farm.quoteToken.address).toLowerCase()]
         const totalLiquidity = new BigNumber(farm.lpTotalInQuoteToken).times(quoteTokenPriceUsd)
-        console.log(farm.poolWeight)
-        console.log(cakePrice)
-       
+
         const apr = isActive ? getFarmApr(farm.poolWeight, cakePrice, totalLiquidity) : 0
-        console.log(apr)
+
         return { ...farm, apr, liquidity: totalLiquidity }
       })
 
@@ -229,6 +228,7 @@ const Farms: React.FC = () => {
           return farms
       }
     }
+
 
     if (isActive) {
       farmsStaked = stakedOnly ? farmsList(stakedOnlyFarms) : farmsList(activeFarms)

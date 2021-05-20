@@ -13,10 +13,14 @@ export const fetchFarmUserAllowances = async (account: string, farmsToFetch: Far
     return { address: lpContractAddress, name: 'allowance', params: [account, masterChefAddress] }
   })
 
+  console.log(calls)
   const rawLpAllowances = await multicall(erc20ABI, calls)
   const parsedLpAllowances = rawLpAllowances.map((lpBalance) => {
     return new BigNumber(lpBalance).toJSON()
   })
+
+  console.log(rawLpAllowances)
+  console.log(parsedLpAllowances)
   return parsedLpAllowances
 }
 
@@ -61,14 +65,18 @@ export const fetchFarmUserEarnings = async (account: string, farmsToFetch: FarmC
   const calls = farmsToFetch.map((farm) => {
     return {
       address: masterChefAddress,
-      name: 'pendingCake',
+      name: 'pendingSms',
       params: [farm.pid, account],
     }
   })
 
+  console.log('fetchFarmUserEarnings')
+  console.log(calls)
   const rawEarnings = await multicall(masterchefABI, calls)
+  console.log(rawEarnings)
   const parsedEarnings = rawEarnings.map((earnings) => {
     return new BigNumber(earnings).toJSON()
   })
+  console.log(parsedEarnings)
   return parsedEarnings
 }

@@ -42,12 +42,24 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, account, addLiquidi
   const stakedBalance = new BigNumber(stakedBalanceAsString)
   const earnings = new BigNumber(earningsAsString)
   const lpAddress = getAddress(lpAddresses)
+  console.log('lpAddress')
+  console.log(lpAddress)
   const lpName = farm.lpSymbol.toUpperCase()
-  const isApproved = account && allowance && allowance.isGreaterThan(0)
+  console.log(account)
+  console.log(allowance.toString())
+  console.log(tokenBalance.toString())
+  console.log(stakedBalance.toString())
+  console.log(earnings.toString())
+  console.log(allowance.isGreaterThan(0))
+  console.log(farm.userData )
+  const isApproved = account && allowance && allowance.isGreaterThan(1)
+  console.log(isApproved)
   const web3 = useWeb3()
+
 
   const lpContract = getBep20Contract(lpAddress, web3)
 
+  console.log(lpContract)
   const { onApprove } = useApprove(lpContract)
 
   const handleApprove = useCallback(async () => {

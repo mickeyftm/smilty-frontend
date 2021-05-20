@@ -13,12 +13,6 @@
     "format:write": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
     "generate:config": "ts-node --compiler-options '{\"module\":\"commonjs\"}' scripts/generateConfig"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn format:check",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -34,6 +28,7 @@
   "dependencies": {
     "@binance-chain/bsc-connector": "^1.0.0",
     "@ethersproject/abi": "^5.0.7",
+    "@pancakeswap-libs/sdk": "^1.0.1",
     "@pancakeswap/uikit": "^0.29.4",
     "@reduxjs/toolkit": "^1.5.0",
     "@types/react": "^17.0.2",
@@ -77,7 +72,6 @@
     "@types/react-redux": "^7.1.16",
     "@types/react-transition-group": "^4.4.1",
     "eslint": "^7.20.0",
-    "husky": "4.3.5",
     "prettier": "^2.1.2",
     "source-map-explorer": "^2.5.2",
     "ts-node": "^9.1.1"

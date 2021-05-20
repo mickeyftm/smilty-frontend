@@ -16,6 +16,8 @@ export const useApprove = (lpContract: Contract) => {
   const handleApprove = useCallback(async () => {
     try {
       const tx = await approve(lpContract, masterChefContract, account)
+      console.log('handleApprove')
+      console.log(tx)
       dispatch(fetchFarmUserDataAsync(account))
       return tx
     } catch (e) {

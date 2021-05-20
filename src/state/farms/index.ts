@@ -59,16 +59,27 @@ export const { setFarmsPublicData, setFarmUserData, setLoadArchivedFarmsData } =
 export const fetchFarmsPublicDataAsync = () => async (dispatch, getState) => {
   const fetchArchived = getState().farms.loadArchivedFarmsData
   const farmsToFetch = fetchArchived ? farmsConfig : nonArchivedFarms
+  console.log('farmsToFetch')
+  console.log(farmsToFetch)
   const farms = await fetchFarms(farmsToFetch)
   dispatch(setFarmsPublicData(farms))
 }
 export const fetchFarmUserDataAsync = (account: string) => async (dispatch, getState) => {
   const fetchArchived = getState().farms.loadArchivedFarmsData
   const farmsToFetch = fetchArchived ? farmsConfig : nonArchivedFarms
+  console.log(account)
+  console.log(farmsToFetch)
   const userFarmAllowances = await fetchFarmUserAllowances(account, farmsToFetch)
+  console.log(userFarmAllowances)
   const userFarmTokenBalances = await fetchFarmUserTokenBalances(account, farmsToFetch)
+  console.log(userFarmTokenBalances)
   const userStakedBalances = await fetchFarmUserStakedBalances(account, farmsToFetch)
+  console.log(userStakedBalances)
+  console.log(account)
+  console.log(farmsToFetch)
   const userFarmEarnings = await fetchFarmUserEarnings(account, farmsToFetch)
+
+  console.log(userFarmEarnings)
 
   const arrayOfUserDataObjects = userFarmAllowances.map((farmAllowance, index) => {
     return {
@@ -79,6 +90,8 @@ export const fetchFarmUserDataAsync = (account: string) => async (dispatch, getS
       earnings: userFarmEarnings[index],
     }
   })
+
+ 
 
   dispatch(setFarmUserData({ arrayOfUserDataObjects }))
 }

@@ -12,7 +12,7 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://exchange.pancakeswap.finance/#/swap',
+        href: 'http://smileyswap.com/swap/',
       },
       // {
       //   label: 'Liquidity',
@@ -24,7 +24,7 @@ const config: MenuEntry[] = [
       // },
       {
         label: 'Liquidity',
-        href: 'https://v1exchange.pancakeswap.finance/#/pool',
+        href: 'http://smileyswap.com/swap/#/pool',
       },
     ],
   },

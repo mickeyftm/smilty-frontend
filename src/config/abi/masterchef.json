@@ -352,7 +352,7 @@
         "type": "address"
       }
     ],
-    "name": "pendingCake",
+    "name": "pendingSms",
     "outputs": [
       {
         "internalType": "uint256",

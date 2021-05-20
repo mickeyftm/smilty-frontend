@@ -14,28 +14,46 @@ export const fetchPrices = createAsyncThunk<PriceApiThunk>('prices/fetch', async
   const data = (await response.json()) as PriceApiResponse
 
   // console.log(data)
-  // const tokenList = {
-  //   "0x4E77c69B0C4964829405144087c5eCf70d643deA": {
-  //     name: "Token",
-  //     price: "1",
-  //     price_BNB: "0.01",
-  //     symbol: "TOKEN"
-  //   },
-  //   "0x2F104cb88aF971A3a2896cA51d3948748d4fF93A": {
-  //     name: "Token1",
-  //     price: "2",
-  //     price_BNB: "0.01",
-  //     symbol: "TOKEN1"
-  //   },
-  //   "0x1dfd1E98d6f6606c28D630EFf8E4Ad9b130089f8": {
-  //     name: "Token2",
-  //     price: "3",
-  //     price_BNB: "0.01",
-  //     symbol: "TOKEN2"
-  //   }
-  // }
+  const tokenList = {
+    "0x3F50080A84DfDE885Ca3348d9180D91A402EbB88": {
+      name: "USDT",
+      price: "1",
+      price_BNB: "0.01",
+      symbol: "USDT"
+    },
+    "0x17D321515D0D91Ca7eA4DD37e62C9707d23Bbc66": {
+      name: "USDC",
+      price: "2",
+      price_BNB: "0.01",
+      symbol: "USDC"
+    },
+    "0x1dfd1E98d6f6606c28D630EFf8E4Ad9b130089f8": {
+      name: "Token2",
+      price: "3",
+      price_BNB: "0.01",
+      symbol: "TOKEN2"
+    },
+    "0x7cdfb60FD99F018F3E7008717ac914E06f332c1f": {
+      name: "UNI",
+      price: "3",
+      price_BNB: "0.01",
+      symbol: "UNI"
+    },
+    "0x3eB3F51081206AD9d1ffA6571dd8770d83d79B6f": {
+      name: "BUSD",
+      price: "3",
+      price_BNB: "0.01",
+      symbol: "BUSD"
+    },
+    "0x3a714C664D79227f70Bb696Baa5B56EB4DF8C7A7": {
+      name: "DAI",
+      price: "3",
+      price_BNB: "0.01",
+      symbol: "DAI"
+    }
+  }
 
-  // data.data = Object.assign(data.data, tokenList)
+  data.data = Object.assign(data.data, tokenList)
   // Return normalized token names
   return {
     updated_at: data.updated_at,
