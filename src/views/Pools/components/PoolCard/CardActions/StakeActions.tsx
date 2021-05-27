@@ -45,6 +45,11 @@ const StakeAction: React.FC<StakeActionsProps> = ({
 
   const [onPresentTokenRequired] = useModal(<NotEnoughTokensModal tokenSymbol={stakingToken.symbol} />)
 
+    console.log(stakingMax)
+    console.log(isBnbPool)
+    console.log(pool)
+    console.log(stakingTokenPrice)
+
   const [onPresentStake] = useModal(
     <StakeModal stakingMax={stakingMax} isBnbPool={isBnbPool} pool={pool} stakingTokenPrice={stakingTokenPrice} />,
   )
@@ -58,6 +63,8 @@ const StakeAction: React.FC<StakeActionsProps> = ({
       isRemovingStake
     />,
   )
+
+    console.log(stakingTokenBalance.gt(0))
 
   const renderStakeAction = () => {
     return isStaked ? (

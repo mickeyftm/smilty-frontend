@@ -18,7 +18,6 @@ import { fetchTeam, fetchTeams } from './teams'
 import { fetchAchievements } from './achievements'
 import { fetchPrices } from './prices'
 import { fetchWalletNfts } from './collectibles'
-// import { Currency, CurrencyAmount, ETHER, JSBI, Token, TokenAmount } from '@pancakeswap-libs/sdk'
 
 export const useFetchPublicData = () => {
   const dispatch = useAppDispatch()
@@ -171,7 +170,6 @@ export const useGetApiPrices = () => {
 
 export const useGetApiPrice = (address: string) => {
   const prices = useGetApiPrices()
-
   if (!prices) {
     return null
   }
@@ -186,11 +184,8 @@ export const usePriceBnbBusd = (): BigNumber => {
 
 export const usePriceCakeBusd = (): BigNumber => {
   const cakeBnbFarm = useFarmFromPid(1)
-  console.log(cakeBnbFarm)
   const bnbBusdPrice = usePriceBnbBusd()
- 
   const cakeBusdPrice = cakeBnbFarm.tokenPriceVsQuote ? bnbBusdPrice.times(cakeBnbFarm.tokenPriceVsQuote) : BIG_ZERO
-  console.log(cakeBusdPrice)
   return cakeBusdPrice
 }
 

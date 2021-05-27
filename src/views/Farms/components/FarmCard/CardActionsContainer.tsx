@@ -42,24 +42,12 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, account, addLiquidi
   const stakedBalance = new BigNumber(stakedBalanceAsString)
   const earnings = new BigNumber(earningsAsString)
   const lpAddress = getAddress(lpAddresses)
-  console.log('lpAddress')
-  console.log(lpAddress)
+
   const lpName = farm.lpSymbol.toUpperCase()
-  console.log(account)
-  console.log(allowance.toString())
-  console.log(tokenBalance.toString())
-  console.log(stakedBalance.toString())
-  console.log(earnings.toString())
-  console.log(allowance.isGreaterThan(0))
-  console.log(farm.userData )
+
   const isApproved = account && allowance && allowance.isGreaterThan(1)
-  console.log(isApproved)
   const web3 = useWeb3()
-
-
   const lpContract = getBep20Contract(lpAddress, web3)
-
-  console.log(lpContract)
   const { onApprove } = useApprove(lpContract)
 
   const handleApprove = useCallback(async () => {
@@ -93,7 +81,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, account, addLiquidi
       <Flex>
         <Text bold textTransform="uppercase" color="secondary" fontSize="12px" pr="3px">
           {/* TODO: Is there a way to get a dynamic value here from useFarmFromSymbol? */}
-          CAKE
+          SMS
         </Text>
         <Text bold textTransform="uppercase" color="textSubtle" fontSize="12px">
           {t('Earned')}

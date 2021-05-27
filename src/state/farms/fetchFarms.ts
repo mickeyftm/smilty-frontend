@@ -13,7 +13,6 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
 
     farmsToFetch.map(async (farmConfig) => {
       const lpAddress = getAddress(farmConfig.lpAddresses)
-      console.log(lpAddress)
       const calls = [
         // Balance of token in the LP contract
         {
@@ -59,11 +58,6 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
         quoteTokenDecimals,
       ] = await multicall(erc20, calls)
 
-      console.log(tokenBalanceLP.toString())
-      console.log(quoteTokenBalanceLP.toString())
-      console.log(lpTokenBalanceMC.toString())
-      console.log(lpTotalSupply.toString())
-      console.log(quoteTokenDecimals.toString())
       // Ratio in % a LP tokens that are in staking, vs the total number in circulation
       const lpTokenRatio = new BigNumber(lpTokenBalanceMC).div(new BigNumber(lpTotalSupply))
    
@@ -76,9 +70,7 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
         console.log(lpTotalInQuoteToken.toJSON())
       // Amount of token in the LP that are considered staking (i.e amount of token * lp ratio)
       const tokenAmount = new BigNumber(tokenBalanceLP).div(BIG_TEN.pow(tokenDecimals)).times(lpTokenRatio)
-      console.log(quoteTokenBalanceLP.toString())
-      console.log(quoteTokenDecimals.toString())
-      console.log(lpTokenRatio.toString())
+
       const quoteTokenAmount = new BigNumber(quoteTokenBalanceLP)
         .div(BIG_TEN.pow(quoteTokenDecimals))
         .times(lpTokenRatio)
@@ -95,12 +87,9 @@ const fetchFarms = async (farmsToFetch: FarmConfig[]) => {
         },
       ])
 
-      console.log(info)
-      console.log(totalAllocPoint)
       const allocPoint = new BigNumber(info.allocPoint._hex)
       const poolWeight = allocPoint.div(new BigNumber(totalAllocPoint))
 
-      console.log(quoteTokenAmount.toString())
       return {
         ...farmConfig,
         tokenAmount: tokenAmount.toJSON(),

@@ -13,7 +13,7 @@ const injected = new InjectedConnector({ supportedChainIds: [chainId] })
 
 const walletconnect = new WalletConnectConnector({
   rpc: { [chainId]: rpcUrl },
-  bridge: 'https://pancakeswap.bridge.walletconnect.org/',
+  bridge: 'https://smileyswap-lab.gitbook.io/smiley-swap/getting-started/contract-addresses',
   qrcode: true,
   pollingInterval: POLLING_INTERVAL,
 })

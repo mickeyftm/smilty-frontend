@@ -11,9 +11,13 @@ import TotalValueLockedCard from 'views/Home/components/TotalValueLockedCard'
 import EarnAPRCard from 'views/Home/components/EarnAPRCard'
 import EarnAssetCard from 'views/Home/components/EarnAssetCard'
 import WinCard from 'views/Home/components/WinCard'
+import TwitterCard from 'views/Home/components/TwitterCard'
 
 const Hero = styled.div`
   align-items: center;
+  background-image: url('/images/sms-left.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -23,6 +27,8 @@ const Hero = styled.div`
   text-align: center;
 
   ${({ theme }) => theme.mediaQueries.lg} {
+    background-image: url('/images/sms-left.svg'), url('/images/sms-right.svg');
+    background-position: left center, right center;
     height: 165px;
     padding-top: 0;
   }
@@ -87,17 +93,19 @@ const Home: React.FC = () => {
         <Cards>
           <FarmStakingCard />
           {/* <LotteryCard /> */}
-          <EarnAPRCard />
+          <TwitterCard />
+         
         </Cards>
-        {/* <CTACards>
-        
-          <EarnAssetCard />
-          <WinCard />
-        </CTACards> */}
-        <Cards>
+        <CTACards>
           <CakeStats />
+          <EarnAPRCard />
           <TotalValueLockedCard />
-        </Cards>
+          {/* <EarnAssetCard />
+          <WinCard /> */}
+        </CTACards>
+        {/* <Cards>
+         
+        </Cards> */}
       </div>
     </Page>
   )

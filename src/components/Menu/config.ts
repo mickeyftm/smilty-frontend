@@ -113,7 +113,7 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Contact',
-        href: '1',
+        href: 'https://smileyswap-lab.gitbook.io/smiley-swap/',
       },
       {
         label: 'Github',
@@ -121,11 +121,11 @@ const config: MenuEntry[] = [
       },
       {
         label: 'Docs',
-        href: '2',
+        href: 'https://smileyswap-lab.gitbook.io/smiley-swap/',
       },
       {
-        label: 'Blog',
-        href: '3',
+        label: 'Bridge',
+        href: 'https://smileyswap-lab.gitbook.io/smiley-swap/getting-started/contract-addresses',
       },
     ],
   },

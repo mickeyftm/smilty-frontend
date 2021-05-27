@@ -67,19 +67,14 @@ export const fetchFarmsPublicDataAsync = () => async (dispatch, getState) => {
 export const fetchFarmUserDataAsync = (account: string) => async (dispatch, getState) => {
   const fetchArchived = getState().farms.loadArchivedFarmsData
   const farmsToFetch = fetchArchived ? farmsConfig : nonArchivedFarms
-  console.log(account)
-  console.log(farmsToFetch)
-  const userFarmAllowances = await fetchFarmUserAllowances(account, farmsToFetch)
-  console.log(userFarmAllowances)
-  const userFarmTokenBalances = await fetchFarmUserTokenBalances(account, farmsToFetch)
-  console.log(userFarmTokenBalances)
-  const userStakedBalances = await fetchFarmUserStakedBalances(account, farmsToFetch)
-  console.log(userStakedBalances)
-  console.log(account)
-  console.log(farmsToFetch)
-  const userFarmEarnings = await fetchFarmUserEarnings(account, farmsToFetch)
 
-  console.log(userFarmEarnings)
+  const userFarmAllowances = await fetchFarmUserAllowances(account, farmsToFetch)
+
+  const userFarmTokenBalances = await fetchFarmUserTokenBalances(account, farmsToFetch)
+
+  const userStakedBalances = await fetchFarmUserStakedBalances(account, farmsToFetch)
+
+  const userFarmEarnings = await fetchFarmUserEarnings(account, farmsToFetch)
 
   const arrayOfUserDataObjects = userFarmAllowances.map((farmAllowance, index) => {
     return {

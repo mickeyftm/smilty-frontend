@@ -37,6 +37,9 @@ const StakeModal: React.FC<StakeModalProps> = ({
   const { t } = useTranslation()
   const { theme } = useTheme()
 
+  console.log(sousId)
+  console.log(isBnbPool)
+
   const { onStake } = useSousStake(sousId, isBnbPool)
   const { onUnstake } = useSousUnstake(sousId, pool.enableEmergencyWithdraw)
   const { toastSuccess, toastError } = useToast()
@@ -65,6 +68,7 @@ const StakeModal: React.FC<StakeModalProps> = ({
   const handleConfirmClick = async () => {
     setPendingTx(true)
 
+    alert(isRemovingStake)
     if (isRemovingStake) {
       // unstaking
       try {
@@ -82,6 +86,8 @@ const StakeModal: React.FC<StakeModalProps> = ({
     } else {
       try {
         // staking
+        console.log(stakeAmount)
+        console.log(stakingToken.decimals)
         await onStake(stakeAmount, stakingToken.decimals)
         toastSuccess(`${t('Staked')}!`, t(`Your ${stakingToken.symbol} funds have been staked in the pool!`))
         setPendingTx(false)
@@ -102,7 +108,7 @@ const StakeModal: React.FC<StakeModalProps> = ({
       <Flex alignItems="center" justifyContent="space-between" mb="8px">
         <Text bold>{isRemovingStake ? t('Unstake') : t('Stake')}:</Text>
         <Flex alignItems="center" minWidth="70px">
-          <Image src={`/images/tokens/${stakingToken.symbol}.png`} width={24} height={24} alt={stakingToken.symbol} />
+          {/* <Image src={`/images/tokens/${stakingToken.symbol}.png`} width={24} height={24} alt={stakingToken.symbol} /> */}
           <Text ml="4px" bold>
             {stakingToken.symbol}
           </Text>

@@ -36,6 +36,13 @@ const AprRow: React.FC<AprRowProps> = ({
   const { targetRef, tooltip, tooltipVisible } = useTooltip(tooltipContent, { placement: 'bottom-end' })
 
   const earningTokenPrice = useGetApiPrice(earningToken.address ? getAddress(earningToken.address) : '')
+  
+  console.log(stakingTokenPrice, 'stakingTokenPrice')
+  console.log(earningTokenPrice, 'earningTokenPrice')
+  console.log(totalStaked, 'totalStaked')
+  console.log(stakingToken.decimals, 'stakingToken.decimals')
+  console.log( getBalanceNumber(totalStaked, stakingToken.decimals))
+  console.log( parseFloat(tokenPerBlock))
   const apr = getPoolApr(
     stakingTokenPrice,
     earningTokenPrice,

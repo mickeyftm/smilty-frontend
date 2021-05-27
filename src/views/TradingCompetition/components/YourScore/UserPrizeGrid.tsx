@@ -30,7 +30,7 @@ const UserPrizeGrid: React.FC<{ userTradingInformation?: UserTradingInformationP
     <StyledPrizeTable>
       <StyledThead>
         <tr>
-          <th>{t('CAKE Prizes ')}</th>
+          <th>{t('SMS Prizes ')}</th>
           <th>{t('Achievements')}</th>
           <th>{t('NFT')}</th>
         </tr>

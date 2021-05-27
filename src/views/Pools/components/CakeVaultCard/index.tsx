@@ -35,12 +35,14 @@ const CakeVaultCard: React.FC<CakeVaultProps> = ({ pool, showStakedOnly }) => {
   const userInfo = useGetVaultUserInfo(lastUpdated)
   const vaultFees = useGetVaultFees()
   const { totalCakeInVault, pricePerFullShare } = useGetVaultSharesInfo()
-  console.log(pool)
+ 
   const { stakingToken } = pool
   //   Estimate & manual for now. 288 = once every 5 mins. We can change once we have a better sense of this
   const timesCompoundedDaily = 288
   const accountHasSharesStaked = userInfo.shares && userInfo.shares.gt(0)
+  console.log(stakingToken,'stakingToken')
   const stakingTokenPrice = useGetApiPrice(stakingToken.address ? getAddress(stakingToken.address) : '')
+  console.log(stakingTokenPrice,'stakingTokenPrice')
   const isLoading = !pool.userData || !userInfo.shares
   const performanceFeeAsDecimal = vaultFees.performanceFee && parseInt(vaultFees.performanceFee, 10) / 100
 

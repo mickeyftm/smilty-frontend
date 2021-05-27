@@ -232,7 +232,6 @@ const Farms: React.FC = () => {
 
     if (isActive) {
       farmsStaked = stakedOnly ? farmsList(stakedOnlyFarms) : farmsList(activeFarms)
-      console.log(isActive)
     }
     if (isInactive) {
       farmsStaked = stakedOnly ? farmsList(stakedInactiveFarms) : farmsList(inactiveFarms)

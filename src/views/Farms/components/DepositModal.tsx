@@ -38,6 +38,7 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
     setVal(fullBalance)
   }, [fullBalance, setVal])
 
+
   return (
     <Modal title={t('Stake LP tokens')} onDismiss={onDismiss}>
       <ModalInput

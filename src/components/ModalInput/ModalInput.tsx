@@ -68,6 +68,8 @@ const ModalInput: React.FC<ModalInputProps> = ({
   const { t } = useTranslation()
   const isBalanceZero = max === '0' || !max
 
+  console.log(max)
+
   const displayBalance = (balance: string) => {
     if (isBalanceZero) {
       return '0'
@@ -78,6 +80,8 @@ const ModalInput: React.FC<ModalInputProps> = ({
     }
     return balanceNumber.toLocaleString()
   }
+
+
 
   return (
     <div style={{ position: 'relative' }}>

@@ -10,9 +10,12 @@ import BigNumber from 'bignumber.js'
 
 // Pool 0, Cake / Cake is a different kind of contract (master chef)
 // BNB pools use the native BNB token (wrapping ? unwrapping is done at the contract level)
-const nonBnbPools = poolsConfig.filter((p) => p.stakingToken.symbol !== 'BNB')
-const bnbPools = poolsConfig.filter((p) => p.stakingToken.symbol === 'BNB')
+const nonBnbPools = poolsConfig.filter((p) => p.stakingToken.symbol !== 'SMS')
+const bnbPools = poolsConfig.filter((p) => p.stakingToken.symbol === 'SMS')
 const nonMasterPools = poolsConfig.filter((p) => p.sousId !== 0)
+console.log(nonBnbPools)
+console.log(bnbPools)
+console.log(nonMasterPools)
 const web3 = getWeb3NoAccount()
 const masterChefContract = new web3.eth.Contract((masterChefABI as unknown) as AbiItem, getMasterChefAddress())
 
@@ -37,6 +40,8 @@ export const fetchUserBalances = async (account) => {
     name: 'balanceOf',
     params: [account],
   }))
+
+  
   const tokenBalancesRaw = await multicall(erc20ABI, calls)
   const tokenBalances = nonBnbPools.reduce(
     (acc, pool, index) => ({ ...acc, [pool.sousId]: new BigNumber(tokenBalancesRaw[index]).toJSON() }),

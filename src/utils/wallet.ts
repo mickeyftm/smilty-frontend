@@ -9,6 +9,7 @@ import { nodes } from './getRpcUrl'
 export const setupNetwork = async () => {
   const provider = (window as WindowChain).ethereum
   if (provider) {
+    console.log(provider, 'provider')
     const chainId = parseInt(process.env.REACT_APP_CHAIN_ID, 10)
     try {
       await provider.request({

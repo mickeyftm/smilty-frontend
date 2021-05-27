@@ -65,6 +65,11 @@ const StyledLinkExternal = styled(LinkExternal)`
   font-weight: 400;
 `
 
+const StyledText = styled.span`
+  color: #585555;
+  font-size: 14px;
+`
+
 const StakeContainer = styled.div`
   color: ${({ theme }) => theme.colors.text};
   align-items: center;
@@ -162,6 +167,7 @@ const ActionPanel: React.FunctionComponent<ActionPanelProps> = ({
         )}
         <StyledLinkExternal href={bsc}>{t('View Contract')}</StyledLinkExternal>
         <StyledLinkExternal href={info}>{t('See Pair Info')}</StyledLinkExternal>
+        <StyledText>{t('Collect 10% of the proceeds to the project party')}</StyledText>
         <TagsContainer>
           {farm.isCommunity ? <CommunityTag /> : <CoreTag />}
           {dual ? <DualTag /> : null}
