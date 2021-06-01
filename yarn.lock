@@ -4588,10 +4588,23 @@
     tiny-warning "^1.0.3"
     toformat "^2.0.0"
 
-"@xdcx/uikit-v1@^0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@xdcx/uikit-v1/-/uikit-v1-0.3.2.tgz#4b2f507e34e7e175b48580884eee805970123ded"
-  integrity sha512-A43hUUrhkW0LX4qOnH3h4an1YmtOmJedtw4n6Yc239wv+ZM3GmCXDtJ4QJHDlKg8D9YIwr2KgmbvuK2OAQfcgg==
+"@xdcx/smiley-uikit@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@xdcx/smiley-uikit/-/smiley-uikit-0.0.1.tgz#75f36246320b444a8a32d8ec4ea325205fd253b3"
+  integrity sha512-w6OO9kKK4/zylXAeIqwnQ+ABNv3m/8S5ZK+VATlvKlcBf+1y4Qbh/Pk+Y1uqpmumwldONSZdt+AoloPqn7c5mg==
+  dependencies:
+    "@popperjs/core" "^2.9.2"
+    "@types/lodash" "^4.14.168"
+    "@types/styled-system" "^5.1.10"
+    lodash "^4.17.20"
+    react-popper "^2.2.5"
+    react-transition-group "^4.4.1"
+    styled-system "^5.1.5"
+
+"@xdcx/uikit-v1@^0.3.3":
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/@xdcx/uikit-v1/-/uikit-v1-0.3.3.tgz#01986bc52aa4fc9b0ba8c00f73a4084313256df8"
+  integrity sha512-zTB27pIV3EJyEZtj3rJAn6rcPl+0aFYikrP9dfti94mhoGSPD6n7zlt406mZYB8VyiQExMq6YTyDovW4mz+kVA==
   dependencies:
     "@popperjs/core" "^2.9.2"
     "@types/lodash" "^4.14.168"

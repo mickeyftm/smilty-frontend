@@ -6,7 +6,7 @@ import { useTranslation } from 'contexts/Localization'
 import useTheme from 'hooks/useTheme'
 import useAuth from 'hooks/useAuth'
 import { usePriceCakeBusd, useProfile , usePriceSms} from 'state/hooks'
-import config from './config'
+import links from './config'
 
 const Menu = (props) => {
   const { account } = useWeb3React()
@@ -19,7 +19,7 @@ const Menu = (props) => {
 
   return (
     <UikitMenu
-      account={account}
+      account={account as string}
       login={login}
       logout={logout}
       isDark={isDark}
@@ -28,7 +28,7 @@ const Menu = (props) => {
       langs={languageList}
       setLang={setLanguage}
       cakePriceUsd={smsPrice}
-      links={config}
+      links={links}
       // profile={{
       //   username: profile?.username,
       //   image: profile?.nft ? `/images/nfts/${profile.nft?.images.sm}` : undefined,
