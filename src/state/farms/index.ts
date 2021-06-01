@@ -59,8 +59,7 @@ export const { setFarmsPublicData, setFarmUserData, setLoadArchivedFarmsData } =
 export const fetchFarmsPublicDataAsync = () => async (dispatch, getState) => {
   const fetchArchived = getState().farms.loadArchivedFarmsData
   const farmsToFetch = fetchArchived ? farmsConfig : nonArchivedFarms
-  console.log('farmsToFetch')
-  console.log(farmsToFetch)
+
   const farms = await fetchFarms(farmsToFetch)
   dispatch(setFarmsPublicData(farms))
 }

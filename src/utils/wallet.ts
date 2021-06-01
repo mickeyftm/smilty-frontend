@@ -11,20 +11,21 @@ export const setupNetwork = async () => {
   if (provider) {
     console.log(provider, 'provider')
     const chainId = parseInt(process.env.REACT_APP_CHAIN_ID, 10)
+    console.log(chainId)
     try {
       await provider.request({
         method: 'wallet_addEthereumChain',
         params: [
           {
             chainId: `0x${chainId.toString(16)}`,
-            chainName: 'Binance Smart Chain Mainnet',
+            chainName: 'fantoms Chain Mainnet',
             nativeCurrency: {
-              name: 'BNB',
-              symbol: 'bnb',
+              name: 'SMS',
+              symbol: 'sms',
               decimals: 18,
             },
             rpcUrls: nodes,
-            blockExplorerUrls: ['https://bscscan.com/'],
+            blockExplorerUrls: [],
           },
         ],
       })

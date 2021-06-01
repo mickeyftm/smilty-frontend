@@ -13,13 +13,15 @@ const injected = new InjectedConnector({ supportedChainIds: [chainId] })
 
 const walletconnect = new WalletConnectConnector({
   rpc: { [chainId]: rpcUrl },
-  bridge: 'https://smileyswap-lab.gitbook.io/smiley-swap/getting-started/contract-addresses',
+  bridge: 'https://explorer.testnet.fantom.network/',
   qrcode: true,
   pollingInterval: POLLING_INTERVAL,
 })
 
-const bscConnector = new BscConnector({ supportedChainIds: [chainId] })
 
+
+const bscConnector = new BscConnector({ supportedChainIds: [chainId] })
+console.log(bscConnector)
 export const connectorsByName: { [connectorName in ConnectorNames]: any } = {
   [ConnectorNames.Injected]: injected,
   [ConnectorNames.WalletConnect]: walletconnect,

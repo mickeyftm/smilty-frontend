@@ -19,6 +19,7 @@ import { fetchAchievements } from './achievements'
 import { fetchPrices } from './prices'
 import { fetchWalletNfts } from './collectibles'
 
+
 export const useFetchPublicData = () => {
   const dispatch = useAppDispatch()
   const { slowRefresh } = useRefresh()
@@ -57,7 +58,6 @@ export const useFarmFromSymbol = (lpSymbol: string): Farm => {
 
 export const useFarmUser = (pid) => {
   const farm = useFarmFromPid(pid)
-
   return {
     allowance: farm.userData ? new BigNumber(farm.userData.allowance) : BIG_ZERO,
     tokenBalance: farm.userData ? new BigNumber(farm.userData.tokenBalance) : BIG_ZERO,
@@ -180,6 +180,11 @@ export const useGetApiPrice = (address: string) => {
 export const usePriceBnbBusd = (): BigNumber => {
   const bnbBusdFarm = useFarmFromPid(1)
   return bnbBusdFarm.tokenPriceVsQuote ? new BigNumber(1).div(bnbBusdFarm.tokenPriceVsQuote) : BIG_ZERO
+}
+
+export const usePriceSms = () => {
+  const sms =  useGetApiPrice('0xe536dD58f1C221395b7C6ecD6643398e7aaD64E1')
+  return sms;
 }
 
 export const usePriceCakeBusd = (): BigNumber => {

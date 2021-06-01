@@ -4,11 +4,16 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: '/',
+    href: 'http://smileyswap.com/',
   },
   {
     label: 'Trade',
     icon: 'TradeIcon',
+    initialOpenState: true,
+    status: {
+      text: 'MIGRATE',
+      color: 'warning',
+    },
     items: [
       {
         label: 'Exchange',

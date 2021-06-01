@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text, BaseLayout } from '@pancakeswap/uikit'
+import { Heading, Text, BaseLayout } from '@xdcx/uikit-v1'
 import { useTranslation } from 'contexts/Localization'
 
 import Page from 'components/layout/Page'
@@ -29,6 +29,7 @@ const Hero = styled.div`
   ${({ theme }) => theme.mediaQueries.lg} {
     background-image: url('/images/sms-left.svg'), url('/images/sms-right.svg');
     background-position: left center, right center;
+    background-repeat: no-repeat;
     height: 165px;
     padding-top: 0;
   }

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Helmet } from 'react-helmet-async'
 import { useLocation } from 'react-router'
 import { customMeta, DEFAULT_META } from 'config/constants/meta'
-import { usePriceCakeBusd } from 'state/hooks'
+import { usePriceCakeBusd, usePriceSms } from 'state/hooks'
 import Container from './Container'
 
 const StyledPage = styled(Container)`
@@ -11,9 +11,12 @@ const StyledPage = styled(Container)`
   padding-top: 16px;
   padding-bottom: 16px;
 
+  background-image: url('/images/sms-left.svg'), url('/images/sms-right.svg');
+  background-position: left center, right center;
+  background-repeat: no-repeat;
   ${({ theme }) => theme.mediaQueries.sm} {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   ${({ theme }) => theme.mediaQueries.lg} {
@@ -24,13 +27,10 @@ const StyledPage = styled(Container)`
 
 const PageMeta = () => {
   const { pathname } = useLocation()
-  const cakePriceUsd = usePriceCakeBusd()
-  const cakePriceUsdDisplay = cakePriceUsd.eq(0)
-    ? ''
-    : `$${cakePriceUsd.toNumber().toLocaleString(undefined, {
-        minimumFractionDigits: 3,
-        maximumFractionDigits: 3,
-      })}`
+  const cakePriceUsd = usePriceSms()
+  const cakePriceUsdDisplay = cakePriceUsd
+    ? `$${cakePriceUsd}`
+    : ''
   const pageMeta = customMeta[pathname] || {}
   const { title, description, image } = { ...DEFAULT_META, ...pageMeta }
   const pageTitle = cakePriceUsdDisplay ? [title, cakePriceUsdDisplay].join(' - ') : title

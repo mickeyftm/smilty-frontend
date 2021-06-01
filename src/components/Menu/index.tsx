@@ -5,7 +5,7 @@ import { languageList } from 'config/localization/languages'
 import { useTranslation } from 'contexts/Localization'
 import useTheme from 'hooks/useTheme'
 import useAuth from 'hooks/useAuth'
-import { usePriceCakeBusd, useProfile } from 'state/hooks'
+import { usePriceCakeBusd, useProfile , usePriceSms} from 'state/hooks'
 import config from './config'
 
 const Menu = (props) => {
@@ -13,6 +13,7 @@ const Menu = (props) => {
   const { login, logout } = useAuth()
   const { isDark, toggleTheme } = useTheme()
   const cakePriceUsd = usePriceCakeBusd()
+  const smsPrice = usePriceSms()
   const { profile } = useProfile()
   const { currentLanguage, setLanguage } = useTranslation()
 
@@ -26,7 +27,7 @@ const Menu = (props) => {
       currentLang={currentLanguage.code}
       langs={languageList}
       setLang={setLanguage}
-      cakePriceUsd={cakePriceUsd.toNumber()}
+      cakePriceUsd={smsPrice}
       links={config}
       // profile={{
       //   username: profile?.username,
