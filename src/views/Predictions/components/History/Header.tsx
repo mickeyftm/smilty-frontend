@@ -1,6 +1,6 @@
 import React from 'react'
 import { useWeb3React } from '@web3-react/core'
-import { ArrowForwardIcon, Box, Button, Radio, Flex, Heading, Text } from '@pancakeswap/uikit'
+import { ArrowForwardIcon, Box, Button, Radio, Flex, Heading, Text } from '@xdcx/smiley-uikit'
 import { useAppDispatch } from 'state'
 import { HistoryFilter } from 'state/types'
 import { setHistoryFilter, setHistoryPaneState, fetchHistory } from 'state/predictions'

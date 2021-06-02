@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardHeader, Heading, Text, Flex, Image } from '@pancakeswap/uikit'
+import { CardHeader, Heading, Text, Flex, Image } from '@xdcx/smiley-uikit'
 import styled from 'styled-components'
 import { useTranslation } from 'contexts/Localization'
 

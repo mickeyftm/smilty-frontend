@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { useMatchBreakpoints, useModal } from '@pancakeswap/uikit'
+import { useMatchBreakpoints, useModal } from '@xdcx/smiley-uikit'
 import { useAppDispatch } from 'state'
 import { useGetPredictionsStatus, useInitialBlock, useIsChartPaneOpen } from 'state/hooks'
 import {

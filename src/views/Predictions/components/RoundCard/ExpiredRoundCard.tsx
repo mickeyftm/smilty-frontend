@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Box, BlockIcon, CardBody } from '@pancakeswap/uikit'
+import { Box, BlockIcon, CardBody } from '@xdcx/smiley-uikit'
 import { useTranslation } from 'contexts/Localization'
 import { Round, BetPosition } from 'state/types'
 import { RoundResult } from '../RoundResult'

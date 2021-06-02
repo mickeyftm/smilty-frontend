@@ -1,6 +1,6 @@
 import React from 'react'
 import BigNumber from 'bignumber.js'
-import { Flex, Text } from '@pancakeswap/uikit'
+import { Flex, Text } from '@xdcx/smiley-uikit'
 import { useTranslation } from 'contexts/Localization'
 import { useWeb3React } from '@web3-react/core'
 import RecentCakeProfitBalance from './RecentCakeProfitBalance'
