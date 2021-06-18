@@ -1,6 +1,5 @@
 import tokens from './tokens'
 import { FarmConfig } from './types'
-import contracts from './contracts'
 
 const farms: FarmConfig[] = [
   /**
@@ -23,8 +22,8 @@ const farms: FarmConfig[] = [
         250: '0xDC1240a044ccB5953ecD831fbd626f2fb1EC6A77',
         4002: '0x1fD803aF0401bc5BC2279243c72F6E712e5A73Ba',
       },
-      token: tokens.dai,
-      quoteToken: tokens.usdt,
+      token: tokens.AMB,
+      quoteToken: tokens.usdc,
     },
     {
       pid: 1,
@@ -33,8 +32,8 @@ const farms: FarmConfig[] = [
         250: '0x31Ea4050d84F4F3b5776A7678E408DfB4132A7D8',
         4002: '0x8dDf72bA97DE0FfFa019f24132452244DC3f2A2B',
       },
-      token: tokens.busd,
-      quoteToken: tokens.usdt,
+      token: tokens.AMB,
+      quoteToken: tokens.wftm,
     },
 ]
 

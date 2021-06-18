@@ -2,7 +2,7 @@ const tokens = {
   wftm: {
     symbol: 'WFTM',
     address: {
-      250: '',
+      250: '0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83',
       4002: '0x643d5eA9D482cFA5b56CBA63Af064569a1698a92',
     },
     decimals: 18,
@@ -38,7 +38,7 @@ const tokens = {
   usdc: {
     symbol: 'USDC',
     address: {
-      250: '',
+      250: '0x04068da6c83afcfa0e13ba15a6696662335d5b75',
       4002: '0x17D321515D0D91Ca7eA4DD37e62C9707d23Bbc66',
     },
     decimals: 18,
