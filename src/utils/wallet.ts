@@ -20,8 +20,8 @@ export const setupNetwork = async () => {
             chainId: `0x${chainId.toString(16)}`,
             chainName: 'fantoms Chain Mainnet',
             nativeCurrency: {
-              name: 'SMS',
-              symbol: 'sms',
+              name: 'AMB',
+              symbol: 'AMB',
               decimals: 18,
             },
             rpcUrls: nodes,

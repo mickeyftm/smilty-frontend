@@ -16,17 +16,17 @@ const initialState: PriceState = {
   data: null
 }
 
-const SMS = new Token(ChainId.BSCTESTNET, '0xe536dD58f1C221395b7C6ecD6643398e7aaD64E1', 18)
+const AMB = new Token(ChainId.BSCTESTNET, '0xe536dD58f1C221395b7C6ecD6643398e7aaD64E1', 18)
 
 async function getPair(): Promise<Pair> {
 
-  const pairAddress = Pair.getAddress(SMS, WETH[SMS.chainId])
+  const pairAddress = Pair.getAddress(AMB, WETH[AMB.chainId])
 
   const reserves = ['0x1fD803aF0401bc5BC2279243c72F6E712e5A73Ba', '0x8dDf72bA97DE0FfFa019f24132452244DC3f2A2B']
 
   const [reserve0, reserve1] = reserves
 
-  const tokens = [SMS, WETH[SMS.chainId]]
+  const tokens = [AMB, WETH[AMB.chainId]]
   const [token0, token1] = tokens[0].sortsBefore(tokens[1]) ? tokens : [tokens[1], tokens[0]]
 
   const pair = new Pair(new TokenAmount(token0, reserve0), new TokenAmount(token1, reserve1))
@@ -42,15 +42,15 @@ export const fetchPrices = createAsyncThunk<PriceApiThunk>('prices/fetch', async
   
     const pair = await getPair();
 
-    const route = new Route([pair], WETH[SMS.chainId])
-    const smsMidPrice = route.midPrice.toSignificant(6);
+    const route = new Route([pair], WETH[AMB.chainId])
+    const AMBMidPrice = route.midPrice.toSignificant(6);
 
     const tokenList = {
         "0xe536dD58f1C221395b7C6ecD6643398e7aaD64E1": {
-          name: "SMS",
-          price: smsMidPrice.toString(),
-          price_BNB: smsMidPrice.toString(),
-          symbol: "SMS"
+          name: "AMB",
+          price: AMBMidPrice.toString(),
+          price_BNB: AMBMidPrice.toString(),
+          symbol: "AMB"
         }
     }
 

@@ -17,8 +17,8 @@ const tokens = {
     decimals: 18,
     projectLink: '',
   },
-  sms: {
-    symbol: 'SMS',
+  AMB: {
+    symbol: 'AMB',
     address: {
       250: '',
       4002: '0xe536dD58f1C221395b7C6ecD6643398e7aaD64E1',

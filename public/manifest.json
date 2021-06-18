@@ -1,7 +1,7 @@
 {
-  "short_name": "SmileySwap",
-  "name": "SmileySwap",
-  "description": "Farm SMS with SMILEY LP Tokens",
+  "short_name": "AmabieSwap",
+  "name": "AmabieSwap",
+  "description": "Farm AMB with Spirit LP Tokens",
   "icons": [
   ],
   "start_url": "/index.html",

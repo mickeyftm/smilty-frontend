@@ -182,9 +182,9 @@ export const usePriceBnbBusd = (): BigNumber => {
   return bnbBusdFarm.tokenPriceVsQuote ? new BigNumber(1).div(bnbBusdFarm.tokenPriceVsQuote) : BIG_ZERO
 }
 
-export const usePriceSms = () => {
-  const sms =  useGetApiPrice('0xe536dD58f1C221395b7C6ecD6643398e7aaD64E1')
-  return sms;
+export const usePriceAMB = () => {
+  const AMB =  useGetApiPrice('0xe536dD58f1C221395b7C6ecD6643398e7aaD64E1')
+  return AMB;
 }
 
 export const usePriceCakeBusd = (): BigNumber => {

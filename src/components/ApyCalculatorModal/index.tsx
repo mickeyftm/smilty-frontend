@@ -33,7 +33,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
   apr,
   linkLabel,
   linkHref,
-  earningTokenSymbol = 'SMS',
+  earningTokenSymbol = 'AMB',
   roundingDecimals = 2,
   compoundFrequency = 1,
   performanceFee = 0,

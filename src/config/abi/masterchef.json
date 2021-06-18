@@ -352,7 +352,7 @@
         "type": "address"
       }
     ],
-    "name": "pendingSms",
+    "name": "pendingAMB",
     "outputs": [
       {
         "internalType": "uint256",

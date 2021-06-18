@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Helmet } from 'react-helmet-async'
 import { useLocation } from 'react-router'
 import { customMeta, DEFAULT_META } from 'config/constants/meta'
-import { usePriceCakeBusd, usePriceSms } from 'state/hooks'
+import { usePriceCakeBusd, usePriceAMB } from 'state/hooks'
 import Container from './Container'
 
 const StyledPage = styled(Container)`
@@ -27,7 +27,7 @@ const StyledPage = styled(Container)`
 
 const PageMeta = () => {
   const { pathname } = useLocation()
-  const cakePriceUsd = usePriceSms()
+  const cakePriceUsd = usePriceAMB()
   const cakePriceUsdDisplay = cakePriceUsd
     ? `$${cakePriceUsd}`
     : ''

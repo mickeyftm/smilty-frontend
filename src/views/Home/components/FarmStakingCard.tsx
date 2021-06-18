@@ -59,13 +59,13 @@ const FarmedStakingCard = () => {
         <Heading size="xl" mb="24px">
           {t('Farms & Staking')}
         </Heading>
-        <CardImage src="/images/smiley.svg" alt="sms logo" width={64} height={64} />
+        <CardImage src="/images/smiley.svg" alt="amb logo" width={64} height={64} />
         <Block>
-          <Label>{t('SMS to Harvest')}:</Label>
+          <Label>{t('AMB to Harvest')}:</Label>
           <CakeHarvestBalance />
         </Block>
         <Block>
-          <Label>{t('SMS in Wallet')}:</Label>
+          <Label>{t('AMB in Wallet')}:</Label>
           <CakeWalletBalance />
         </Block>
         <Actions>

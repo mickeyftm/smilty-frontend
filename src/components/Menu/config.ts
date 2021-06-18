@@ -4,7 +4,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'http://smileyswap.com/',
+    href: '/',
   },
   {
     label: 'Trade',
@@ -17,11 +17,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'http://smileyswap.com/swap/',
+        href: 'https://swap.spiritswap.finance/#/swap?outputCurrency=0x5Cc61A78F164885776AA610fb0FE1257df78E59B',
       },
       {
         label: 'Liquidity',
-        href: 'http://smileyswap.com/swap/#/pool',
+        href: 'https://swap.spiritswap.finance/#/pool',
       },
     ],
   },
@@ -40,20 +40,12 @@ const config: MenuEntry[] = [
     icon: 'MoreIcon',
     items: [
       {
-        label: 'Contact',
-        href: 'https://smileyswap-lab.gitbook.io/smiley-swap/',
-      },
-      {
-        label: 'Github',
-        href: 'https://github.com/smileyswap',
-      },
-      {
         label: 'Docs',
         href: 'https://smileyswap-lab.gitbook.io/smiley-swap/',
       },
       {
         label: 'Bridge',
-        href: 'https://smileyswap-lab.gitbook.io/smiley-swap/getting-started/contract-addresses',
+        href: 'https://multichain.xyz/',
       },
     ],
   },

@@ -10,8 +10,8 @@ import BigNumber from 'bignumber.js'
 
 // Pool 0, Cake / Cake is a different kind of contract (master chef)
 // BNB pools use the native BNB token (wrapping ? unwrapping is done at the contract level)
-const nonBnbPools = poolsConfig.filter((p) => p.stakingToken.symbol !== 'SMS')
-const bnbPools = poolsConfig.filter((p) => p.stakingToken.symbol === 'SMS')
+const nonBnbPools = poolsConfig.filter((p) => p.stakingToken.symbol !== 'AMB')
+const bnbPools = poolsConfig.filter((p) => p.stakingToken.symbol === 'AMB')
 const nonMasterPools = poolsConfig.filter((p) => p.sousId !== 0)
 console.log(nonBnbPools)
 console.log(bnbPools)
@@ -95,7 +95,7 @@ export const fetchUserPendingRewards = async (account) => {
   )
 
   // Cake / Cake pool
-  const pendingReward = await masterChefContract.methods.pendingSms('0', account).call()
+  const pendingReward = await masterChefContract.methods.pendingAMB('0', account).call()
 
   return { ...pendingRewards, 0: new BigNumber(pendingReward).toJSON() }
 }
