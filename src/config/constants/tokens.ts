@@ -20,7 +20,7 @@ const tokens = {
   AMB: {
     symbol: 'AMB',
     address: {
-      250: '',
+      250: '0x3863f9643f6a822e6295536EAE3E2955A2929dfa',
       4002: '0xe536dD58f1C221395b7C6ecD6643398e7aaD64E1',
     },
     decimals: 18,

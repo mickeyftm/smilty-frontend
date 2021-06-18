@@ -1,10 +1,10 @@
 export default {
   masterChef: {
-    250: '0x134c778B9a3b0fa6E117718a7779DAf8D05661bC',
+    250: '0xd0baC6B863fF4A2d336b0474327E3dbDBCaCd441',
     4002: '0x134c778B9a3b0fa6E117718a7779DAf8D05661bC',
   },
   sousChef: {
-    250: '0xd574fBdfD93B1CFC0b6b7fa9C3116E592489Ed0e',
+    250: '',
     4002: '0xd574fBdfD93B1CFC0b6b7fa9C3116E592489Ed0e',
   },
   lottery: {
@@ -20,47 +20,47 @@ export default {
     4002: '0xDC94a41E4EeCe895ce1cC9B326A39a211CAe815B',
   },
   pancakeProfile: {
-    250: '',
-    4002: '',
+    250: '0xDf4dBf6536201370F95e06A0F8a7a70fE40E388a',
+    4002: '0x4B683C7E13B6d5D7fd1FeA9530F451954c1A7c8A',
   },
   pancakeRabbits: {
-    250: '',
-    4002: '',
+    250: '0xDf7952B35f24aCF7fC0487D01c8d5690a60DBa07',
+    4002: '0x60935F36e4631F73f0f407e68642144e07aC7f5E',
   },
   bunnyFactory: {
-    250: '',
-    4002: '',
+    250: '0xfa249Caa1D16f75fa159F7DFBAc0cC5EaB48CeFf',
+    4002: '0x707CBF373175fdB601D34eeBF2Cf665d08f01148',
   },
   claimRefund: {
-    250: '',
+    250: '0xE7e53A7e9E3Cf6b840f167eF69519175c497e149',
     4002: '',
   },
   pointCenterIfo: {
-    250: '',
-    4002: '',
+    250: '0x3C6919b132462C1FEc572c6300E83191f4F0012a',
+    4002: '0xd2Ac1B1728Bb1C11ae02AB6e75B76Ae41A2997e3',
   },
   bunnySpecial: {
-    250: '',
-    4002: '',
+    250: '0xFee8A195570a18461146F401d6033f5ab3380849',
+    4002: '0x7b7b1583De1DeB32Ce6605F6deEbF24A0671c17C',
   },
   tradingCompetition: {
-    250: '',
-    4002: '',
+    250: '0xd718baa0B1F4f70dcC8458154042120FFE0DEFFA',
+    4002: '0xC787F45B833721ED3aC46E99b703B3E1E01abb97',
   },
   easterNft: {
-    250: '',
-    4002: '',
+    250: '0x23c41D28A239dDCAABd1bb1deF8d057189510066',
+    4002: '0x24ec6962dbe874F6B67B5C50857565667fA0854F',
   },
   cakeVault: {
-    250: '',
+    250: '0xa80240Eb5d7E05d3F250cF000eEc0891d00b51CC',
     4002: '',
   },
   predictions: {
-    250: '',
-    4002: '',
+    250: '0x516ffd7D1e0Ca40b1879935B2De87cb20Fc1124b',
+    4002: '0x4f3140C74789F1D809420343ea83BcE52B7bbAA5',
   },
   chainlinkOracle: {
-    250: '',
+    250: '0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE',
     4002: '',
   },
 }

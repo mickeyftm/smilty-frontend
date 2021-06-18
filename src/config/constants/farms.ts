@@ -17,20 +17,20 @@ const farms: FarmConfig[] = [
     //   quoteToken: tokens.wftm,
     // },
     {
-      pid: 1,
-      lpSymbol: 'DAI-USDC LP',
+      pid: 0,
+      lpSymbol: 'DAI-USDT LP',
       lpAddresses: {
-        250: '0x9606D683d03f012DDa296eF0ae9261207C4A5847',
-        4002: '0x9606D683d03f012DDa296eF0ae9261207C4A5847',
+        250: '0xDC1240a044ccB5953ecD831fbd626f2fb1EC6A77',
+        4002: '0x1fD803aF0401bc5BC2279243c72F6E712e5A73Ba',
       },
       token: tokens.dai,
       quoteToken: tokens.usdt,
     },
     {
-      pid: 4,
+      pid: 1,
       lpSymbol: 'BUSD-USDT LP',
       lpAddresses: {
-        250: '0x8dDf72bA97DE0FfFa019f24132452244DC3f2A2B',
+        250: '0x31Ea4050d84F4F3b5776A7678E408DfB4132A7D8',
         4002: '0x8dDf72bA97DE0FfFa019f24132452244DC3f2A2B',
       },
       token: tokens.busd,
