@@ -36,23 +36,6 @@ const farms: FarmConfig[] = [
       token: tokens.busd,
       quoteToken: tokens.usdt,
     },
-    {
-      pid: 0,
-      risk: 5,
-      lpSymbol: 'TEST-USDC LP',
-      decimal: 18,
-      lpAddresses: {
-        250: '0xB84cEab651ED201726D72fc20F2dE828bfC1c9a9',
-        4002: '',
-      },
-      tokenSymbol: 'TEST',
-      tokenAddresses: {
-        250: '0xD6232b0e8d604d45a9Ebfc4fbf500fC22f1cedD6',
-        4002: '',
-      },
-      quoteTokenSymbol: QuoteToken.USDC,
-      quoteTokenAdresses: contracts.usdc,
-    },
 ]
 
 export default farms
