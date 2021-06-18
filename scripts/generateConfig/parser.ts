@@ -57,13 +57,11 @@ export const getFarms = (data) => {
       pid: farm.pid,
       lpSymbol: farm.lp_symbol,
       lpAddresses: {
-        250: farm.lp_mainnet_address,
-        4002: '0xE66790075ad839978fEBa15D4d8bB2b415556a1D',
+        250: '0xE66790075ad839978fEBa15D4d8bB2b415556a1D',
       },
       tokenSymbol: farm?.token?.symbol,
       tokenAddresses: {
-        250: farm?.token?.mainnet_address,
-        4002: '0xa35062141fa33bca92ce69fed37d0e8908868aae',
+        250: '0xa35062141fa33bca92ce69fed37d0e8908868aae',
       },
       quoteTokenSymbol: farm?.quote_token?.symbol,
       quoteTokenAdresses: farm?.quote_token?.mainnet_address,

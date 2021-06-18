@@ -17,10 +17,10 @@ const farms: FarmConfig[] = [
     // },
     {
       pid: 1,
-      lpSymbol: 'DAI-USDT LP',
+      lpSymbol: 'DAI-USDC LP',
       lpAddresses: {
-        250: '',
-        4002: '0x1fD803aF0401bc5BC2279243c72F6E712e5A73Ba',
+        250: '0x9606D683d03f012DDa296eF0ae9261207C4A5847',
+        4002: '0x9606D683d03f012DDa296eF0ae9261207C4A5847',
       },
       token: tokens.dai,
       quoteToken: tokens.usdt,
@@ -29,7 +29,7 @@ const farms: FarmConfig[] = [
       pid: 4,
       lpSymbol: 'BUSD-USDT LP',
       lpAddresses: {
-        250: '',
+        250: '0x8dDf72bA97DE0FfFa019f24132452244DC3f2A2B',
         4002: '0x8dDf72bA97DE0FfFa019f24132452244DC3f2A2B',
       },
       token: tokens.busd,
